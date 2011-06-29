@@ -30,4 +30,5 @@
 	<build>
 		<finalName>Shibboleth.sso</finalName>
 	</build>
+	<description>This is a tiny webapp that fakes the shibboleth login and then redirects the user to the target URL.</description>
 </project>
