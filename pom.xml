@@ -7,6 +7,9 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>Fake Shibboleth Login</name>
 	<url>http://www.oucs.ox.ac.uk</url>
+	<properties>
+		<sakai.kernel.version>1.0.18</sakai.kernel.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -26,7 +29,31 @@
 			<version>2.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject.kernel</groupId>
+			<artifactId>sakai-kernel-api</artifactId>
+			<version>${sakai.kernel.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject.kernel</groupId>
+			<artifactId>sakai-component-manager</artifactId>
+			<version>${sakai.kernel.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>sakai-maven</id>
+			<name>Sakai Maven Repo</name>
+			<layout>default</layout>
+			<url>http://source.sakaiproject.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<build>
 		<finalName>Shibboleth.sso</finalName>
 	</build>
